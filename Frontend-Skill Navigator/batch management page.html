@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Navigator - Batch Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <style type="text/css">/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Batch Management Section */
+.batch-management {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.batch-management h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.batch-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.batch-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.batch-card h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.batch-card p {
+    margin: 0;
+}
+
+.edit-btn,
+.delete-btn,
+.add-batch-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+
+.edit-btn {
+    background-color: #0073e6;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+}
+
+.add-batch-btn {
+    background-color: #28a745;
+    margin-top: 20px;
+}
+
+.edit-btn:hover,
+.delete-btn:hover,
+.add-batch-btn:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}</style>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Skill Navigator</a>
+      </div>
+      <ul>
+        <li><a href="admin dashboard.html">Dashboard</a></li>
+        <li><a href="batch management page.html">Batch Management</a></li>
+        <li><a href="report generation page.html">Report Generation</a></li>
+        <li><a href="admin login page.html">Logout</a></li>
+        <li><a href="helpFAQ page.html">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="batch-management">
+      <h1>Batch Management</h1>
+      <div class="batch-list">
+        <div class="batch-card">
+          <h2>Web Development Batch 1</h2>
+          <p>Candidates: 25</p>
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+        <div class="batch-card">
+          <h2>Data Analysis Batch 2</h2>
+          <p>Candidates: 18</p>
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+        <div class="batch-card">
+          <h2>Digital Marketing Batch 1</h2>
+          <p>Candidates: 22</p>
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+      <button class="add-batch-btn">Add New Batch</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Skill Navigator. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js">document.addEventListener('DOMContentLoaded', function () {
+    // Handle edit button click
+    const editButtons = document.querySelectorAll('.edit-btn');
+    editButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const batchCard = this.closest('.batch-card');
+            const batchName = batchCard.querySelector('h2').textContent;
+            alert(Edit functionality for ${batchName} is not yet implemented.);
+            // Add logic to handle editing, such as opening a modal or redirecting to an edit page
+        });
+    });
+
+    // Handle delete button click
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const batchCard = this.closest('.batch-card');
+            const batchName = batchCard.querySelector('h2').textContent;
+            if (confirm(Are you sure you want to delete ${batchName}?)) {
+                batchCard.remove();
+                // Add logic to handle actual deletion, such as making an API call to remove the batch
+            }
+        });
+    });
+
+    // Handle add batch button click
+    const addBatchButton = document.querySelector('.add-batch-btn');
+    addBatchButton.addEventListener('click', function () {
+        alert('Add new batch functionality is not yet implemented.');
+        // Add logic to handle adding a new batch, such as opening a modal or redirecting to an add page
+    });
+});</script>
+</body>
+</html>

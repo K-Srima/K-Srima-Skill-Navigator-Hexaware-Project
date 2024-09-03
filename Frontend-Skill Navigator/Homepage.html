@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Navigator - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <style type="text/css">body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons .login-btn, .auth-buttons .signup-btn {
+    background-color: #005bb5;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.auth-buttons .signup-btn {
+    background-color: #ff5722;
+}
+
+.auth-buttons a:hover {
+    opacity: 0.9;
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(to right, rgba(0, 115, 230, 0.9), rgba(255, 87, 34, 0.9)), url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.cta-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Features Section */
+.features {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex-basis: 30%;
+    max-width: 30%;
+    text-align: center;
+}
+
+.feature-card img {
+    max-width: 50px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #0073e6;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 45%;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.testimonial-card img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    float: left;
+}
+
+.testimonial-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    clear: both;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}</style>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Skill Navigator</a>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="candidate dashboard.html">Dashboard</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <a href="candidate registration page.html" class="login-btn">Login</a>
+        <a href="candidate registration page.html" class="signup-btn">Sign Up</a>
+        <a href="admin login page.html" class="signup-btn">Admin Login</a>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to Skill Navigator</h1>
+      <p>Discover your path to success. Explore, learn, and grow with our comprehensive skill development platform.</p>
+      <a href="candidate registration page.html" class="cta-btn">Get Started</a>
+    </section>
+
+    <section class="features">
+      <h2>Key Features</h2>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <img src="C:\Users\Srima\Downloads\personalizedpath.jpg" alt="Feature 1">
+          <h3>Personalized Skill Paths</h3>
+          <p>Tailored training plans to help you achieve your goals.</p>
+        </div>
+        <div class="feature-card">
+          <img src="C:\Users\Srima\Downloads\interactivelearning.jpg" alt="Feature 2">
+          <h3>Interactive Learning</h3>
+          <p>Engaging modules and hands-on projects to enhance your skills.</p>
+        </div>
+        <div class="feature-card">
+          <img src="C:\Users\Srima\Downloads\progresstracking.jpg" alt="Feature 3">
+          <h3>Progress Tracking</h3>
+          <p>Monitor your progress and achievements with our intuitive dashboard.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>What Our Users Say</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <img src="C:\Users\Srima\Downloads\usericon1.png" alt="User 1">
+          <h3>John Doe</h3>
+          <p>"Skill Navigator has been a game-changer for my career. The personalized learning paths and interactive courses have helped me develop essential skills."</p>
+        </div>
+        <div class="testimonial-card">
+          <img src="C:\Users\Srima\Downloads\usericon1.png" alt="User 2">
+          <h3>Jane Smith</h3>
+          <p>"I've been able to upskill and transition to a new field thanks to the comprehensive training offered by Skill Navigator. Highly recommended!"</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Skill Navigator. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js">document.getElementsByClassName("auth-buttons").onclick=function(){
+        location.href="file:///C:/Users/Srima/Desktop/Hexaware/candidate registration page.html;"
+      };</script>
+</body>
+</html>

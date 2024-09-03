@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Navigator - Report Generation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <style type="text/css">/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Report Generation Section */
+.report-generation {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-generation h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.report-options,
+.report-preview {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.generate-report-btn,
+.download-report-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+}
+
+.generate-report-btn {
+    background-color: #0073e6;
+}
+
+.download-report-btn {
+    background-color: #28a745;
+}
+
+.generate-report-btn:hover,
+.download-report-btn:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}</style>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Skill Navigator</a>
+      </div>
+      <ul>
+        <li><a href="admin dashboard.html">Dashboard</a></li>
+        <li><a href="batch management page.html">Batch Management</a></li>
+        <li><a href="report generation page.html">Report Generation</a></li>
+        <li><a href="admin login page.html">Logout</a></li>
+        <li><a href="helpFAQ page.html">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="report-generation">
+      <h1>Report Generation</h1>
+      <div class="report-options">
+        <div class="form-group">
+          <label for="report-type">Report Type:</label>
+          <select id="report-type" name="report-type" required>
+            <option value="">Select a report</option>
+            <option value="training-progress">Training Progress</option>
+            <option value="candidate-scores">Candidate Scores</option>
+            <option value="batch-allocation">Batch Allocation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="report-format">Report Format:</label>
+          <select id="report-format" name="report-format" required>
+            <option value="">Select a format</option>
+            <option value="pdf">PDF</option>
+            <option value="excel">Excel</option>
+          </select>
+        </div>
+        <button class="generate-report-btn"><a href="file upload page.html">Generate Report</a></button>
+      </div>
+      <div class="report-preview">
+        <h2>Report Preview</h2>
+        <div class="preview-content">
+          <!-- Report preview content goes here -->
+        </div>
+        <button class="download-report-btn">Download Report</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Skill Navigator. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js">document.addEventListener('DOMContentLoaded', () => {
+  const reportTypeSelect = document.getElementById('report-type');
+  const reportFormatSelect = document.getElementById('report-format');
+  const generateReportBtn = document.querySelector('.generate-report-btn');
+  const previewContent = document.querySelector('.preview-content');
+  const downloadReportBtn = document.querySelector('.download-report-btn');
+
+  // Simulate report generation
+  generateReportBtn.addEventListener('click', () => {
+    const reportType = reportTypeSelect.value;
+    const reportFormat = reportFormatSelect.value;
+
+    if (reportType && reportFormat) {
+      // Show a simulated report preview
+      previewContent.innerHTML = `<p><strong>Report Type:</strong> ${reportType.replace('-', ' ')}</p>
+                                  <p><strong>Format:</strong> ${reportFormat.toUpperCase()}</p>
+                                  <p>This is a preview of the ${reportType.replace('-', ' ')} report in ${reportFormat.toUpperCase()} format.</p>`;
+      
+      downloadReportBtn.style.display = 'block'; // Show download button
+    } else {
+      alert('Please select both report type and format.');
+    }
+  });
+
+  // Handle report download
+  downloadReportBtn.addEventListener('click', () => {
+    const reportType = reportTypeSelect.value;
+    const reportFormat = reportFormatSelect.value;
+
+    if (reportType && reportFormat) {
+      // Simulate report download by creating a dummy file
+      const blob = new Blob([Report Type: ${reportType.replace('-', ' ')}\nFormat: ${reportFormat.toUpperCase()}], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = report_${reportType.replace('-', '_')}.${reportFormat};
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } else {
+      alert('Please select both report type and format before downloading.');
+    }
+  });
+
+  // Initially hide the download button
+  downloadReportBtn.style.display = 'none';
+});</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Navigator - Error</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <style type="text/css">/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Error Section */
+.error-section {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.error-section h1 {
+    font-size: 2rem;
+    color: #d9534f;
+    margin-bottom: 20px;
+}
+
+.error-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    background-color: #0073e6;
+    text-decoration: none;
+    text-align: center;
+}
+
+.home-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}</style>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Skill Navigator</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="error-section">
+      <h1>Oops! Something went wrong.</h1>
+      <p>The page you're looking for could not be found.</p>
+      <a href="index.html" class="home-btn">Go to Home</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Skill Navigator. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js">document.addEventListener('DOMContentLoaded', () => {
+  console.log('Error page loaded');
+  
+  // You can add any additional JavaScript functionality here if needed
+});</script>
+</body>
+</html>

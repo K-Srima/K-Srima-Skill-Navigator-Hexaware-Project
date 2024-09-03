@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Navigator - Settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <style type="text/css">/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Settings Section */
+.settings-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    background-color: #0073e6;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}</style>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Skill Navigator</a>
+      </div>
+      <ul>
+        <li><a href="admin dashboard.html">Dashboard</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="settings page.html">Settings</a></li>
+        <li><a href="admin login page.html">Logout</a></li>
+        <li><a href="helpFAQ page.html">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="settings-section">
+      <h1>Settings</h1>
+      <form id="settings-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="notification-settings">Notification Settings:</label>
+          <select id="notification-settings" name="notification-settings" required>
+            <option value="">Select notification settings</option>
+            <option value="all">Receive all notifications</option>
+            <option value="important">Receive only important notifications</option>
+            <option value="none">Receive no notifications</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn">Save Changes</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Skill Navigator. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js">document.addEventListener('DOMContentLoaded', function () {
+    const settingsForm = document.getElementById('settings-form');
+
+    settingsForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const notificationSettings = document.getElementById('notification-settings').value;
+
+        if (name && email && password && notificationSettings) {
+            // Here you would typically send the data to the server using AJAX or Fetch API
+            console.log('Settings updated:');
+            console.log(Name: ${name});
+            console.log(Email: ${email});
+            console.log(Password: ${password});
+            console.log(Notification Settings: ${notificationSettings});
+            
+            alert('Settings saved successfully!');
+            
+            // Optionally reset the form after submission
+            settingsForm.reset();
+        } else {
+            alert('Please fill out all fields.');
+        }
+    });
+});</script>
+</body>
+</html>

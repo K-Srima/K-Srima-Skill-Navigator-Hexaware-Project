@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Navigator - Training Progress</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <style type="text/css">/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons .login-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.auth-buttons a:hover {
+    opacity: 0.9;
+}
+
+/* Progress Section */
+.progress-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-section h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.progress-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.completed-courses, .pending-courses, .feedback {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.completed-courses h2, .pending-courses h2, .feedback h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #0073e6;
+}
+
+.completed-courses ul, .pending-courses ul, .feedback ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.completed-courses li, .pending-courses li, .feedback li {
+    margin-bottom: 15px;
+}
+
+.provide-feedback-btn {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.provide-feedback-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}</style>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Skill Navigator</a>
+      </div>
+      <ul>
+        <li><a href="Homepage.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="candidate dashboard.html">Dashboard</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <a href="Homepage.html" class="login-btn">Logout</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="progress-section">
+      <h1>Your Training Progress</h1>
+      <div class="progress-details">
+        <div class="completed-courses">
+          <h2>Completed Courses</h2>
+          <ul>
+            <li>
+              <h3>Web Development Fundamentals</h3>
+              <p>Score: 92%</p>
+            </li>
+            <li>
+              <h3>Introduction to Data Analysis</h3>
+              <p>Score: 85%</p>
+            </li>
+            <li>
+              <h3>Digital Marketing Strategies</h3>
+              <p>Score: 88%</p>
+            </li>
+          </ul>
+        </div>
+        <div class="pending-courses">
+          <h2>Pending Courses</h2>
+          <ul>
+            <li>
+              <h3>Advanced Web Development</h3>
+              <p>Starts: June 15, 2023</p>
+            </li>
+            <li>
+              <h3>Data Visualization Techniques</h3>
+              <p>Starts: July 1, 2023</p>
+            </li>
+          </ul>
+        </div>
+        <div class="feedback">
+          <h2>Feedback</h2>
+          <p>Your instructors have provided the following feedback:</p>
+          <ul>
+            <li>
+              <h3>Web Development Fundamentals</h3>
+              <p>Great job on the project! Keep up the good work.</p>
+            </li>
+            <li>
+              <h3>Introduction to Data Analysis</h3>
+              <p>You have a strong grasp of the concepts. Consider exploring more advanced techniques.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="feedback form page.html" class="provide-feedback-btn">Provide Feedback</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Skill Navigator. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js">document.addEventListener('DOMContentLoaded', function () {
+    // Example of how you might update progress details dynamically
+    const completedCourses = [
+        { title: "Web Development Fundamentals", score: "92%" },
+        { title: "Introduction to Data Analysis", score: "85%" },
+        { title: "Digital Marketing Strategies", score: "88%" }
+    ];
+
+    const pendingCourses = [
+        { title: "Advanced Web Development", startDate: "June 15, 2023" },
+        { title: "Data Visualization Techniques", startDate: "July 1, 2023" }
+    ];
+
+    const feedback = [
+        { course: "Web Development Fundamentals", comment: "Great job on the project! Keep up the good work." },
+        { course: "Introduction to Data Analysis", comment: "You have a strong grasp of the concepts. Consider exploring more advanced techniques." }
+    ];
+
+    const completedCoursesList = document.querySelector('.completed-courses ul');
+    const pendingCoursesList = document.querySelector('.pending-courses ul');
+    const feedbackList = document.querySelector('.feedback ul');
+
+    // Populate completed courses
+    completedCourses.forEach(course => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = <h3>${course.title}</h3><p>Score: ${course.score}</p>;
+        completedCoursesList.appendChild(listItem);
+    });
+
+    // Populate pending courses
+    pendingCourses.forEach(course => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = <h3>${course.title}</h3><p>Starts: ${course.startDate}</p>;
+        pendingCoursesList.appendChild(listItem);
+    });
+
+    // Populate feedback
+    feedback.forEach(feedbackItem => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = <h3>${feedbackItem.course}</h3><p>${feedbackItem.comment}</p>;
+        feedbackList.appendChild(listItem);
+    });
+});</script>
+</body>
+</html>
