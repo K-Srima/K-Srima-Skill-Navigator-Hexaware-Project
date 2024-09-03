@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style type="text/css">body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group,
+.profile-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:
+}
+    </style>
+    <div class="container">
+        <h2>Create Your Profile</h2>
+        <form id="candidateForm" method="POST" enctype="multipart/form-data" action="process_form.php">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" name="degree" required>
+            </div>
+            <div class="form-group">
+                <label for="specialization">Specialization:</label>
+                <input type="text" id="specialization" name="specialization" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="certifications">Certifications (AWS, Azure, NPTEL, etc.):</label>
+                <input type="text" id="certifications" name="certifications">
+            </div>
+            <div class="form-group">
+                <label for="internship">Internship Details:</label>
+                <input type="text" id="internship" name="internship">
+            </div>
+            <div class="form-group">
+                <label for="courses">Courses Completed (Udemy, Coursera, etc.):</label>
+                <input type="text" id="courses" name="courses">
+            </div>
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile Link:</label>
+                <input type="url" id="linkedin" name="linkedin">
+            </div>
+            <div class="form-group">
+                <label for="github">GitHub Profile Link:</label>
+                <input type="url" id="github" name="github">
+            </div>
+            <div class="form-group">
+                <label for="programming">Programming Languages Known:</label>
+                <input type="text" id="programming" name="programming">
+            </div>
+            <div class="form-group">
+                <label for="uploadCertifications">Upload eCertificates for Certifications:</label>
+                <input type="file" id="uploadCertifications" name="uploadCertifications">
+            </div>
+            <div class="form-group">
+                <label for="uploadInternship">Upload Internship Completion Certificate:</label>
+                <input type="file" id="uploadInternship" name="uploadInternship">
+            </div>
+            <div class="form-group">
+                <label for="uploadCourses">Upload eCertificates for Courses Completed:</label>
+                <input type="file" id="uploadCourses" name="uploadCourses">
+            </div>
+            <div class="form-group">
+                <button type="submit"><a href="profiledisplay.html">Continue</button>
+            </div>
+        </form>
+    </div>
+    <script src="scripts.js">document.getElementById('candidateForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Store form data in localStorage
+    localStorage.setItem('name', document.getElementById('name').value);
+    localStorage.setItem('email', document.getElementById('email').value);
+    localStorage.setItem('degree', document.getElementById('degree').value);
+    localStorage.setItem('specialization', document.getElementById('specialization').value);
+    localStorage.setItem('phone', document.getElementById('phone').value);
+    localStorage.setItem('certifications', document.getElementById('certifications').value);
+    localStorage.setItem('internship', document.getElementById('internship').value);
+    localStorage.setItem('courses', document.getElementById('courses').value);
+    localStorage.setItem('linkedin', document.getElementById('linkedin').value);
+    localStorage.setItem('github', document.getElementById('github').value);
+    localStorage.setItem('programming', document.getElementById('programming').value);
+
+    // Redirect to the profile view page
+    window.location.href = 'profile.html';
+});</script>
+</body>
+</html>
